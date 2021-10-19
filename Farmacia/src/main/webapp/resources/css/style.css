@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.ui-layout-north {
+	z-index: 20 !important;
+	overflow: visible !important;
+	position: relative;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+	position: relative;
+}
+
+.ui-widget, .ui-widget .ui-widget {
+	position: relative;
+	font-size: 95% !important;
+}
