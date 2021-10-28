@@ -30,12 +30,14 @@ public class FornecedoresBean {
 		this.itens = itens;
 	}
 
-@PostConstruct
+public FornecedoresBean() throws ClassNotFoundException, SQLException {
+
+    prepararPesquisa();
+}
+
 public void prepararPesquisa() throws ClassNotFoundException {
 
 	try {
-		Class.forName("org.postgresql.Driver");
-		Connection conexao = ConexaoFactory.conectar();
 		FornecedoresDAO fdao = new FornecedoresDAO();
 		ArrayList<Fornecedores>lista = fdao.listar();
 		itens = new ListDataModel<Fornecedores>(lista);
