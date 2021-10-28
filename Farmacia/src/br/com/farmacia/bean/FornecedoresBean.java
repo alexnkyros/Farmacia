@@ -29,7 +29,15 @@ public class FornecedoresBean {
 		this.itens = itens;
 	}
 
-@PostConstruct
+public FornecedoresBean() {
+	try {
+
+		prepararPesquisa();
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 public void prepararPesquisa() throws ClassNotFoundException {
 
 	try {
